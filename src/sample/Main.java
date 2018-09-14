@@ -61,8 +61,6 @@ public class Main extends Application {
                 final ClipboardContent clipboardContent = new ClipboardContent();
                 clipboardContent.putString(showingTextArea.getText());
                 clipboard.setContent(clipboardContent);
-            }else{
-
             }
         });
         primaryStage.show();
