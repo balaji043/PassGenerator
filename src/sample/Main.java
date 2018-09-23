@@ -6,9 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -41,7 +42,15 @@ public class Main extends Application {
 
         primaryStage.getIcons().add(iconImage);
         primaryStage.setResizable(true);
+/*
+        Image mybi = new Image("/bg.jpg");
+        ImageView imageView = new ImageView(mybi);
+        imageView.setFitHeight(scene.getHeight());
+        imageView.setFitWidth(scene.getWidth());
+*/
+
         layout.getChildren().addAll(inputLengthField, generateButton, showingTextArea, copyButton);
+
         primaryStage.setScene(scene);
 
         inputLengthField.setOnAction(e -> {
@@ -63,6 +72,9 @@ public class Main extends Application {
                 clipboard.setContent(clipboardContent);
             }
         });
+
+//then you set to your node
+
         primaryStage.show();
     }
 
